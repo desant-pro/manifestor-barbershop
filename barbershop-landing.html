@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>МАНИФЕСТОР — барбершоп в Самаре | мужская стрижка и борода</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet" />
+<meta name="description" content="МАНИФЕСТОР — мужская барбершоп в Самаре. Стрижки, бритьё, Hot Towel Shave. Онлайн запись. Работаем ежедневно 10:00–21:00." />
+<meta name="keywords" content="барбершоп Самара, мужская стрижка Самара, барбер Самара, бритьё бороды, Hot Towel Shave" />
+<link rel="canonical" href="https://manifestorbarber.ru/" />
+<meta property="og:title" content="МАНИФЕСТОР — Мужская барбершоп в Самаре" />
+<meta property="og:description" content="Стрижки, бритьё, Hot Towel Shave. Онлайн запись за 30 секунд." />
+<meta property="og:image" content="https://manifestorbarber.ru/og-image.jpg" />
+<meta property="og:url" content="https://manifestorbarber.ru/" />
+<meta property="og:type" content="business.business" />
+<meta property="og:locale" content="ru_RU" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "МАНИФЕСТОР",
+  "description": "Мужская барбершоп — стрижки, бритьё, Hot Towel Shave",
+  "url": "https://manifestorbarber.ru",
+  "telephone": "+7 (993) 473-74-28",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ул. Центральная, 3",
+    "addressLocality": "Самара",
+    "addressCountry": "RU"
+  },
+  "openingHours": "Mo-Su 10:00-21:00",
+  "priceRange": "₽₽",
+  "image": "https://manifestorbarber.ru/og-image.jpg"
+}
+</script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --gold: #2DBD7E;
+  --gold-light: #E8C98E;
+  --gold-dark: #9A7A48;
+  --black: #0A0A0A;
+  --dark: #111111;
+  --dark2: #1A1A1A;
+  --dark3: #222222;
+  --gray: #888888;
+  --light: #F5F0E8;
+  --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+html { scroll-behavior: smooth; }
+body { background: var(--black); color: var(--light); font-family: 'Inter', sans-serif; font-weight: 300; line-height: 1.6; overflow-x: hidden; }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--dark); }
+::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 2px; }
+h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 700; line-height: 1.15; }
+.section-label {
+  font-size: 0.7rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); font-weight: 500;
+  display: flex; align-items: center; gap: 12px;
+}
+.section-label::before { content: ''; display: inline-block; width: 32px; height: 1px; background: var(--gold); flex-shrink: 0; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 0 40px; height: 72px;
+  display: flex; align-items: center; justify-content: space-between; transition: var(--transition);
+}
+nav.scrolled { background: rgba(10,10,10,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(45,189,126,0.15); }
+.nav-logo { text-decoration: none; display: inline-flex; align-items: center; }
+.nav-logo img { height: 44px; width: auto; display: block; }
+.nav-logo span { color: var(--light); }
+.nav-links { display: flex; gap: 36px; list-style: none; }
+.nav-links a { color: rgba(245,240,232,0.7); text-decoration: none; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 400; transition: var(--transition); }
+.nav-links a:hover { color: var(--gold); }
+.nav-cta { background: var(--gold) !important; color: var(--black) !important; padding: 10px 24px; font-weight: 600 !important; clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%); }
+.nav-cta:hover { background: var(--gold-light) !important; transform: translateY(-1px); }
+
+/* HERO */
+.hero { min-height: 100vh; position: relative; display: flex; align-items: center; overflow: hidden; }
+.hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(105deg, rgba(10,10,10,0.92) 0%, rgba(10,10,10,0.6) 50%, rgba(10,10,10,0.3) 100%),
+  url('https://user-gen-media-assets.s3.amazonaws.com/gemini_images/bcc01b94-5d4f-47c3-ac6c-0b5a402d02c0.png') center/cover no-repeat;
+  transform: scale(1.05); animation: heroZoom 14s ease-in-out infinite alternate;
+}
+@keyframes heroZoom { from { transform: scale(1.05); } to { transform: scale(1.0); } }
+.hero-content { position: relative; z-index: 2; padding: 120px 80px 80px; max-width: 780px; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(45,189,126,0.4);
+  padding: 6px 16px; margin-bottom: 32px; font-size: 0.68rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--gold); animation: fadeInUp 0.8s ease both;
+}
+.hero-badge::before { content: ''; width: 6px; height: 6px; background: var(--gold); border-radius: 50%; animation: pulse 2s ease infinite; }
+@keyframes pulse { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.5; transform:scale(0.8); } }
+.hero h1 { font-size: clamp(3rem, 7vw, 6.5rem); line-height: 1.05; margin-bottom: 28px; animation: fadeInUp 0.8s 0.15s ease both; }
+.hero h1 span { color: var(--gold); }
+.hero-sub { font-size: 1.05rem; color: rgba(245,240,232,0.65); max-width: 500px; margin-bottom: 48px; animation: fadeInUp 0.8s 0.3s ease both; }
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; animation: fadeInUp 0.8s 0.45s ease both; }
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 10px; background: var(--gold); color: var(--black);
+  padding: 16px 36px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase;
+  text-decoration: none; cursor: pointer; border: none; clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
+  transition: var(--transition); position: relative; overflow: hidden;
+}
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(45,189,126,0.3); }
+.btn-primary:active { transform: translateY(0); }
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 10px; background: transparent; color: var(--light);
+  padding: 16px 28px; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase;
+  text-decoration: none; border: 1px solid rgba(245,240,232,0.25); transition: var(--transition);
+}
+.btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+.hero-stats { position: absolute; right: 80px; bottom: 80px; display: flex; gap: 48px; animation: fadeInUp 0.8s 0.6s ease both; }
+.hero-stat { text-align: center; }
+.hero-stat-num { font-family: 'Bebas Neue', cursive; font-size: 2.8rem; color: var(--gold); line-height: 1; letter-spacing: 0.05em; }
+.hero-stat-label { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(245,240,232,0.5); margin-top: 4px; }
+.hero-scroll { position: absolute; bottom: 40px; left: 80px; display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,240,232,0.4); animation: fadeInUp 0.8s 0.75s ease both; }
+.hero-scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, transparent, var(--gold)); animation: scrollLine 2s ease infinite; }
+@keyframes scrollLine { 0% { transform:scaleY(0); transform-origin:top; } 50% { transform:scaleY(1); transform-origin:top; } 51% { transform:scaleY(1); transform-origin:bottom; } 100% { transform:scaleY(0); transform-origin:bottom; } }
+
+/* TICKER */
+.ticker { background: var(--gold); padding: 12px 0; overflow: hidden; }
+.ticker-inner { display: flex; animation: tickerScroll 20s linear infinite; white-space: nowrap; }
+.ticker-item { font-family: 'Bebas Neue', cursive; font-size: 0.95rem; letter-spacing: 0.12em; color: var(--black); padding: 0 28px; }
+.ticker-sep { color: rgba(0,0,0,0.35); }
+@keyframes tickerScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* SECTION */
+.section { padding: 100px 80px; }
+.section-header { margin-bottom: 64px; }
+.section-title { font-size: clamp(2.2rem, 4vw, 3.5rem); margin-top: 16px; }
+.section-title span { color: var(--gold); }
+
+/* ABOUT */
+.about { background: var(--dark); display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.about-visual { position: relative; }
+.about-img { width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block; filter: grayscale(15%); }
+.about-accent { position: absolute; bottom: -20px; right: -20px; width: 180px; height: 180px; border: 2px solid var(--gold); z-index: -1; }
+.about-year { position: absolute; top: 24px; left: -24px; background: var(--gold); color: var(--black); padding: 12px 20px; font-family: 'Bebas Neue', cursive; font-size: 1.1rem; letter-spacing: 0.1em; writing-mode: vertical-rl; text-orientation: mixed; transform: rotate(180deg); }
+.about-text h2 { font-size: clamp(2rem, 3.5vw, 3rem); margin: 16px 0 24px; }
+.about-text p { color: rgba(245,240,232,0.65); margin-bottom: 20px; font-size: 0.95rem; }
+.about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px; }
+.about-feature { display: flex; gap: 14px; align-items: flex-start; }
+.about-feature-icon { width: 36px; height: 36px; border: 1px solid var(--gold-dark); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.1rem; }
+.about-feature-text h4 { font-size: 0.85rem; font-family: 'Inter', sans-serif; font-weight: 600; color: var(--light); margin-bottom: 4px; }
+.about-feature-text p { font-size: 0.78rem; color: var(--gray); margin: 0; }
+
+/* SERVICES */
+.services { background: var(--black); }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.service-card { background: var(--dark2); padding: 40px 36px; position: relative; overflow: hidden; transition: var(--transition); border: 1px solid transparent; }
+.service-card::before { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease; }
+.service-card:hover { background: var(--dark3); border-color: rgba(45,189,126,0.1); }
+.service-card:hover::before { transform: scaleX(1); }
+.service-card:hover .service-num { opacity: 0.08; }
+.service-num { font-family: 'Bebas Neue', cursive; font-size: 4rem; color: var(--gold); opacity: 0.04; position: absolute; top: 12px; right: 24px; line-height: 1; transition: var(--transition); }
+.service-icon { font-size: 1.8rem; margin-bottom: 20px; display: block; }
+.service-card h3 { font-size: 1.3rem; margin-bottom: 12px; color: var(--light); }
+.service-card p { font-size: 0.83rem; color: var(--gray); line-height: 1.7; margin-bottom: 24px; }
+.service-price { display: flex; align-items: baseline; gap: 4px; }
+.service-price-from { font-size: 0.68rem; color: var(--gray); letter-spacing: 0.1em; text-transform: uppercase; }
+.service-price-num { font-family: 'Bebas Neue', cursive; font-size: 1.8rem; color: var(--gold); letter-spacing: 0.05em; }
+.service-price-currency { font-size: 0.85rem; color: var(--gold-dark); }
+
+/* GALLERY */
+.gallery { background: var(--dark); }
+.gallery-grid { display: grid; grid-template-columns: repeat(12, 1fr); grid-template-rows: 240px 240px; gap: 4px; margin-top: 64px; }
+.gallery-item { overflow: hidden; position: relative; cursor: pointer; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(30%); transition: all 0.6s ease; transform: scale(1.03); }
+.gallery-item:hover img { filter: grayscale(0%); transform: scale(1.08); }
+.gallery-item:nth-child(1) { grid-column: span 5; grid-row: span 2; }
+.gallery-item:nth-child(2) { grid-column: span 4; }
+.gallery-item:nth-child(3) { grid-column: span 3; }
+.gallery-item:nth-child(4) { grid-column: span 3; }
+.gallery-item:nth-child(5) { grid-column: span 4; }
+
+/* TEAM */
+.team { background: var(--black); }
+.team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.team-card { position: relative; overflow: hidden; }
+.team-photo { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; filter: grayscale(40%); transition: all 0.5s ease; display: block; }
+.team-card:hover .team-photo { filter: grayscale(0%); transform: scale(1.03); }
+.team-info { padding: 20px 0 8px; }
+.team-name { font-size: 1.1rem; font-family: 'Playfair Display', serif; color: var(--light); }
+.team-role { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-top: 4px; font-weight: 500; }
+.team-exp { font-size: 0.78rem; color: var(--gray); margin-top: 6px; }
+.team-socials { display: flex; gap: 12px; margin-top: 12px; }
+.team-social { width: 28px; height: 28px; border: 1px solid rgba(45,189,126,0.3); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; color: var(--gray); text-decoration: none; transition: var(--transition); }
+.team-social:hover { border-color: var(--gold); color: var(--gold); }
+
+/* TESTIMONIALS */
+.testimonials { background: var(--dark); position: relative; overflow: hidden; }
+.testimonials::before { content: '"'; position: absolute; top: -20px; left: 60px; font-family: 'Playfair Display', serif; font-size: 20rem; color: rgba(45,189,126,0.04); line-height: 1; }
+.testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; position: relative; z-index: 1; }
+.testimonial-card { background: rgba(255,255,255,0.025); border: 1px solid rgba(45,189,126,0.1); padding: 36px; transition: var(--transition); }
+.testimonial-card:hover { border-color: rgba(45,189,126,0.25); background: rgba(255,255,255,0.04); }
+.testimonial-stars { display: flex; gap: 3px; margin-bottom: 20px; }
+.testimonial-stars span { color: var(--gold); font-size: 0.9rem; }
+.testimonial-text { font-size: 0.9rem; color: rgba(245,240,232,0.7); line-height: 1.8; margin-bottom: 28px; font-style: italic; }
+.testimonial-author { display: flex; align-items: center; gap: 14px; }
+.testimonial-avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--dark3); border: 2px solid rgba(45,189,126,0.2); object-fit: cover; }
+.testimonial-name { font-weight: 600; font-size: 0.88rem; color: var(--light); }
+.testimonial-meta { font-size: 0.72rem; color: var(--gray); margin-top: 2px; }
+
+.testimonial-avatar-letter {
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 2px solid rgba(45,189,126,0.2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; font-weight: 600; color: var(--gold);
+  flex-shrink: 0; font-family: 'Inter', sans-serif;
+}
+.form-control.error {
+  border-color: #d96b6b;
+  box-shadow: 0 0 0 1px rgba(217,107,107,0.15);
+}
+.form-error {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.75rem;
+  color: #f2a5a5;
+}
+.float-messenger {
+  position: fixed; bottom: 80px; right: 24px; z-index: 98;
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--gold); display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 20px rgba(45,189,126,0.4);
+  transition: transform 0.2s ease;
+}
+.float-messenger:hover { transform: scale(1.1); }
+.float-messenger svg { width: 24px; height: 24px; fill: var(--black); }
+.map-section { height: 400px; width: 100%; }
+.map-section iframe { width: 100%; height: 100%; border: 0; display: block; }
+
+/* BOOKING */
+.booking { background: var(--black); position: relative; overflow: hidden; }
+.booking::before { content: ''; position: absolute; top: -200px; right: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(45,189,126,0.06) 0%, transparent 60%); pointer-events: none; }
+.booking-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; position: relative; z-index: 1; }
+.booking-info h2 { font-size: clamp(2rem, 3vw, 2.8rem); margin: 16px 0 24px; }
+.booking-info p { color: rgba(245,240,232,0.6); font-size: 0.9rem; margin-bottom: 40px; }
+.booking-perks { list-style: none; }
+.booking-perk { display: flex; align-items: center; gap: 14px; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 0.85rem; color: rgba(245,240,232,0.65); }
+.booking-perk::before { content: '✦'; color: var(--gold); font-size: 0.6rem; flex-shrink: 0; }
+.booking-form { background: var(--dark2); padding: 48px; border: 1px solid rgba(45,189,126,0.1); }
+.form-title { font-size: 1.4rem; font-family: 'Playfair Display', serif; margin-bottom: 32px; color: var(--light); }
+.form-group { margin-bottom: 20px; }
+.form-label { display: block; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 8px; }
+.form-control { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(45,189,126,0.15); color: var(--light); padding: 14px 18px; font-size: 0.88rem; font-family: 'Inter', sans-serif; font-weight: 300; outline: none; transition: var(--transition); -webkit-appearance: none; appearance: none; }
+.form-control:focus { border-color: rgba(45,189,126,0.5); background: rgba(255,255,255,0.06); }
+.form-control option { background: var(--dark2); color: var(--light); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-submit { width: 100%; margin-top: 8px; font-size: 0.85rem; padding: 18px; cursor: pointer; clip-path: none; }
+
+/* INFO STRIP */
+.info-strip { background: var(--gold); padding: 60px 80px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; }
+.info-item { text-align: center; }
+.info-icon { font-size: 1.6rem; margin-bottom: 12px; }
+.info-label { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(10,10,10,0.6); font-weight: 500; margin-bottom: 6px; }
+.info-value { font-family: 'Playfair Display', serif; font-size: 1.0rem; color: var(--black); font-weight: 700; }
+
+/* FOOTER */
+footer { background: var(--dark2); padding: 80px 80px 40px; border-top: 1px solid rgba(45,189,126,0.1); }
+.footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 64px; }
+.footer-brand p { font-size: 0.85rem; color: var(--gray); max-width: 280px; line-height: 1.7; margin-top: 16px; }
+.footer-socials { display: flex; gap: 10px; margin-top: 24px; }
+.footer-social { width: 36px; height: 36px; border: 1px solid rgba(45,189,126,0.2); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; color: var(--gray); text-decoration: none; transition: var(--transition); }
+.footer-social:hover { border-color: var(--gold); color: var(--gold); }
+.footer-col h4 { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Inter', sans-serif; font-weight: 600; margin-bottom: 20px; }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { color: var(--gray); text-decoration: none; font-size: 0.85rem; transition: var(--transition); }
+.footer-col a:hover { color: var(--gold); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.05); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; }
+.footer-copy { font-size: 0.75rem; color: var(--gray); }
+.footer-legal { display: flex; gap: 24px; }
+.footer-legal a { font-size: 0.75rem; color: var(--gray); text-decoration: none; transition: var(--transition); }
+.footer-legal a:hover { color: var(--gold); }
+
+/* STICKY BAR */
+.sticky-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: rgba(10,10,10,0.97); backdrop-filter: blur(12px); border-top: 1px solid rgba(45,189,126,0.2); padding: 12px 20px; z-index: 99; gap: 10px; }
+.sticky-bar-cta { flex: 1; text-align: center; background: var(--gold); color: var(--black); padding: 14px; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; display: block; }
+.sticky-bar-call { width: 48px; height: 48px; border: 1px solid rgba(45,189,126,0.3); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; color: var(--gold); text-decoration: none; flex-shrink: 0; }
+
+/* ANIMATIONS */
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .about { grid-template-columns: 1fr; gap: 40px; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+  .booking-inner { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .info-strip { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .section { padding: 70px 24px; }
+  nav { padding: 0 16px; height: auto; min-height: 72px; flex-wrap: wrap; gap: 12px; padding-top: 12px; padding-bottom: 12px; }
+  .nav-links { display: flex; flex-wrap: wrap; gap: 12px; width: 100%; justify-content: flex-start; }
+  .nav-links a { font-size: 0.68rem; }
+  .hero-content { padding: 100px 24px 120px; }
+  .hero-stats { right: 24px; bottom: 100px; gap: 24px; }
+  .hero-scroll { display: none; }
+  .hero-stat-num { font-size: 2rem; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
+  .gallery-item { grid-column: span 1 !important; grid-row: span 1 !important; aspect-ratio: 1; }
+  .gallery-item:nth-child(1) { grid-column: span 2 !important; }
+  .services-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .info-strip { grid-template-columns: repeat(2, 1fr); padding: 40px 24px; }
+  .booking-form { padding: 28px; }
+  .form-row { grid-template-columns: 1fr; }
+  footer { padding: 60px 24px 80px; }
+  .footer-top { grid-template-columns: 1fr; gap: 36px; }
+  .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+  .sticky-bar { display: flex; }
+  .float-messenger { bottom: 80px; right: 16px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#home" class="nav-logo"><img src="images/LOGO.jpg" alt="МАНИФЕСТОР Barber" /></a>
+  <ul class="nav-links">
+    <li><a href="#about">О нас</a></li>
+    <li><a href="#services">Услуги</a></li>
+    <li><a href="#gallery">Работы</a></li>
+    <li><a href="#team">Мастера</a></li>
+    <li><a href="#booking" class="nav-cta">Записаться</a></li>
+  </ul>
+</nav>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-badge">✦ Барбершоп в Самаре с 2017 года</div>
+    <h1>Твой стиль —<br/>наш <span>ремесло</span></h1>
+    <p class="hero-sub">Место, где мужская красота расцветает в атмосфере заботы и комфорта. Мужские стрижки от 1 200 ₽, борода от 800 ₽. <strong style="color:var(--gold)">−10% на первый визит.</strong></p>
+    <div class="hero-actions">
+      <a href="https://n1248198.yclients.com/company/785200/personal/select-services?o=" target="_blank" rel="noopener" class="btn-primary"><span>✦</span> Записаться онлайн</a>
+      <a href="#gallery" class="btn-ghost">Смотреть работы →</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="hero-stat-num">7+</div><div class="hero-stat-label">Лет в Самаре</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">157</div><div class="hero-stat-label">Отзывов на 5★</div></div>
+    <div class="hero-stat"><div class="hero-stat-num">4.9</div><div class="hero-stat-label">Рейтинг</div></div>
+  </div>
+  <div class="hero-scroll"><div class="hero-scroll-line"></div><span>Scroll</span></div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-inner" id="ticker">
+    <span class="ticker-item">Стрижки</span><span class="ticker-item ticker-sep">✦</span>
+    <span class="ticker-item">Бритьё бороды</span><span class="ticker-item ticker-sep">✦</span>
+    <span class="ticker-item">Бритьё опасной бритвой</span><span class="ticker-item ticker-sep">✦</span>
+    <span class="ticker-item">Камуфляж седины</span><span class="ticker-item ticker-sep">✦</span>
+    <span class="ticker-item">Детские стрижки</span><span class="ticker-item ticker-sep">✦</span>
+    <span class="ticker-item">Уход за лицом</span><span class="ticker-item ticker-sep">✦</span>
+    <span class="ticker-item">Стрижки</span><span class="ticker-item ticker-sep">✦</span>
+    <span class="ticker-item">Бритьё бороды</span><span class="ticker-item ticker-sep">✦</span>
+    <span class="ticker-item">Бритьё опасной бритвой</span><span class="ticker-item ticker-sep">✦</span>
+    <span class="ticker-item">Камуфляж седины</span><span class="ticker-item ticker-sep">✦</span>
+    <span class="ticker-item">Детские стрижки</span><span class="ticker-item ticker-sep">✦</span>
+    <span class="ticker-item">Уход за лицом</span><span class="ticker-item ticker-sep">✦</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="section about" id="about">
+  <div class="about-visual reveal">
+    <div class="about-year">С 2017 года</div>
+    <img class="about-img" src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/268c0a79-82f6-45b8-8515-fadeaedbebbc.png" alt="Портрет барбера МАНИФЕСТОР Barber" />
+    <div class="about-accent"></div>
+  </div>
+  <div class="about-text">
+    <div class="section-label reveal">Наша история</div>
+    <h2 class="reveal reveal-delay-1">Место, где<br/><span style="color:var(--gold)">детали решают</span><br/>всё</h2>
+    <p class="reveal reveal-delay-2">МАНИФЕСТОР Barber — это больше, чем барбершоп. Это пространство, где каждый визит становится ритуалом. Мы объединяем традиции классического бритья с современным взглядом на мужской стиль.</p>
+    <p class="reveal reveal-delay-3">Наши мастера прошли обучение в лучших школах Европы и работают только с премиальными инструментами. Каждая стрижка — это разговор, а не просто услуга.</p>
+    <div class="about-features">
+      <div class="about-feature reveal reveal-delay-2">
+        <div class="about-feature-icon">✂</div>
+        <div class="about-feature-text"><h4>Только ручная работа</h4><p>Никаких шаблонов, каждая стрижка под вас</p></div>
+      </div>
+      <div class="about-feature reveal reveal-delay-3">
+        <div class="about-feature-icon">🪒</div>
+        <div class="about-feature-text"><h4>Прямое бритьё</h4><p>Традиционный шейв с горячими полотенцами</p></div>
+      </div>
+      <div class="about-feature reveal reveal-delay-4">
+        <div class="about-feature-icon">🎖</div>
+        <div class="about-feature-text"><h4>Мастера-эксперты</h4><p>Сертифицированные барберы с опытом 5+ лет</p></div>
+      </div>
+      <div class="about-feature reveal reveal-delay-5">
+        <div class="about-feature-icon">🥃</div>
+        <div class="about-feature-text"><h4>Добро пожаловать</h4><p>Виски или кофе — во время стрижки</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section services" id="services">
+  <div class="section-header">
+    <div class="section-label reveal">Прейскурант</div>
+    <h2 class="section-title reveal reveal-delay-1">Наши <span>услуги</span></h2>
+  </div>
+  <div class="services-grid">
+    <div class="service-card reveal">
+      <div class="service-num">01</div>
+      <span class="service-icon">✂️</span>
+      <h3>Классическая стрижка</h3>
+      <p>Полная мужская стрижка с мытьём головы, укладкой и финальной обработкой бритвой по контуру шеи.</p>
+      <div class="service-price"><span class="service-price-from">от</span><span class="service-price-num">1 200</span><span class="service-price-currency">₽</span></div>
+    </div>
+    <div class="service-card reveal reveal-delay-1">
+      <div class="service-num">02</div>
+      <span class="service-icon">🪒</span>
+      <h3>Бритьё и Борода</h3>
+      <p>Коррекция и оформление бороды, горячее полотенце, масло после бритья. Полный ритуал уважения.</p>
+      <div class="service-price"><span class="service-price-from">от</span><span class="service-price-num">800</span><span class="service-price-currency">₽</span></div>
+    </div>
+    <div class="service-card reveal reveal-delay-2">
+      <div class="service-num">03</div>
+      <span class="service-icon">🔥</span>
+      <h3>Hot Towel Shave</h3>
+      <p>Традиционное бритьё опасной бритвой с горячим полотенцем, пеной из помазка и успокаивающей маской.</p>
+      <div class="service-price"><span class="service-price-from">от</span><span class="service-price-num">1 500</span><span class="service-price-currency">₽</span></div>
+    </div>
+    <div class="service-card reveal">
+      <div class="service-num">04</div>
+      <span class="service-icon">👑</span>
+      <h3>VIP Комплекс</h3>
+      <p>Стрижка + борода + горячее полотенце + уход за лицом + напиток. Полный джентльменский ритуал.</p>
+      <div class="service-price"><span class="service-price-from">от</span><span class="service-price-num">2 800</span><span class="service-price-currency">₽</span></div>
+    </div>
+    <div class="service-card reveal reveal-delay-1">
+      <div class="service-num">05</div>
+      <span class="service-icon">🎨</span>
+      <h3>Камуфляж седины</h3>
+      <p>Деликатное тонирование для естественного результата. Возвращает цвет без эффекта покрашено.</p>
+      <div class="service-price"><span class="service-price-from">от</span><span class="service-price-num">1 800</span><span class="service-price-currency">₽</span></div>
+    </div>
+    <div class="service-card reveal reveal-delay-2">
+      <div class="service-num">06</div>
+      <span class="service-icon">👦</span>
+      <h3>Детская стрижка</h3>
+      <p>Для джентльменов до 12 лет. Терпеливые мастера, быстро и качественно, с призом в конце!</p>
+      <div class="service-price"><span class="service-price-from">от</span><span class="service-price-num">700</span><span class="service-price-currency">₽</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section gallery" id="gallery">
+  <div class="section-header">
+    <div class="section-label reveal">Наши работы</div>
+    <h2 class="section-title reveal reveal-delay-1">Говорим <span>ножницами</span></h2>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item"><img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/2367909e-81a5-4523-88a8-7e75bd484b34.png" alt="Галерея барбершопа: мужская стрижка" loading="lazy" style="object-position:left center;" /></div>
+    <div class="gallery-item"><img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/2367909e-81a5-4523-88a8-7e75bd484b34.png" alt="Галерея барбершопа: оформление бороды" loading="lazy" style="object-position:28% center;" /></div>
+    <div class="gallery-item"><img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/2367909e-81a5-4523-88a8-7e75bd484b34.png" alt="Галерея барбершопа: клиент у зеркала" loading="lazy" style="object-position:50% center;" /></div>
+    <div class="gallery-item"><img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/2367909e-81a5-4523-88a8-7e75bd484b34.png" alt="Галерея барбершопа: интерьер" loading="lazy" style="object-position:72% center;" /></div>
+    <div class="gallery-item"><img src="https://user-gen-media-assets.s3.amazonaws.com/gemini_images/2367909e-81a5-4523-88a8-7e75bd484b34.png" alt="Галерея барбершопа: инструменты барбера" loading="lazy" style="object-position:right center;" /></div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section team" id="team">
+  <div class="section-header">
+    <div class="section-label reveal">Наша команда</div>
+    <h2 class="section-title reveal reveal-delay-1">Познакомьтесь<br/>с <span>мастерами</span></h2>
+  </div>
+  <div class="team-grid">
+    <div class="team-card reveal">
+      <img class="team-photo" src="images/1.jpg" alt="Алекс Громов — Старший мастер" />
+      <div class="team-info">
+        <div class="team-name">Алекс Громов</div>
+        <div class="team-role">Старший мастер</div>
+        <div class="team-exp">10 лет · Специалист по фейдам</div>
+        <div class="team-socials"><a href="#" class="team-social" aria-label="Instagram мастера"><!-- TODO: вставить реальную ссылку Instagram -->ig</a><a href="#" class="team-social" aria-label="Telegram мастера"><!-- TODO: вставить реальную ссылку Telegram -->tg</a></div>
+      </div>
+    </div>
+    <div class="team-card reveal reveal-delay-1">
+      <img class="team-photo" src="images/2.jpg" alt="Марк Волков — Барбер и Стилист" />
+      <div class="team-info">
+        <div class="team-name">Марк Волков</div>
+        <div class="team-role">Барбер и Стилист</div>
+        <div class="team-exp">7 лет · Классические стрижки</div>
+        <div class="team-socials"><a href="#" class="team-social" aria-label="Instagram мастера"><!-- TODO: вставить реальную ссылку Instagram -->ig</a><a href="#" class="team-social" aria-label="Telegram мастера"><!-- TODO: вставить реальную ссылку Telegram -->tg</a></div>
+      </div>
+    </div>
+    <div class="team-card reveal reveal-delay-2">
+      <img class="team-photo" src="images/3.jpg" alt="Дэн Соколов — Мастер бритья" />
+      <div class="team-info">
+        <div class="team-name">Дэн Соколов</div>
+        <div class="team-role">Мастер бритья</div>
+        <div class="team-exp">6 лет · Hot Towel Shave</div>
+        <div class="team-socials"><a href="#" class="team-social" aria-label="Instagram мастера"><!-- TODO: вставить реальную ссылку Instagram -->ig</a><a href="#" class="team-social" aria-label="Telegram мастера"><!-- TODO: вставить реальную ссылку Telegram -->tg</a></div>
+      </div>
+    </div>
+    <div class="team-card reveal reveal-delay-3">
+      <img class="team-photo" src="images/4.jpg" alt="Рома Лисин — Барбер" />
+      <div class="team-info">
+        <div class="team-name">Рома Лисин</div>
+        <div class="team-role">Барбер</div>
+        <div class="team-exp">3 года · Мужские тренды</div>
+        <div class="team-socials"><a href="#" class="team-social" aria-label="Instagram мастера"><!-- TODO: вставить реальную ссылку Instagram -->ig</a><a href="#" class="team-social" aria-label="Telegram мастера"><!-- TODO: вставить реальную ссылку Telegram -->tg</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section testimonials" id="testimonials">
+  <div class="section-header">
+    <div class="section-label reveal">Отзывы</div>
+    <h2 class="section-title reveal reveal-delay-1">Что говорят <span>клиенты</span></h2>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testimonial-card reveal">
+      <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      <p class="testimonial-text">«Ходил во многие барбершопы, но МАНИФЕСТОР — это совсем другой уровень. Алекс понял с полуслова, что я хочу. Вышел с идеальным фейдом. Теперь только сюда!»</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar-letter" style="background: #2A1F0E;">ДК</div>
+        <div><div class="testimonial-name">Дмитрий К.</div><div class="testimonial-meta">Постоянный клиент · 2 года</div></div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal reveal-delay-1">
+      <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      <p class="testimonial-text">«Hot Towel Shave — это что-то невероятное. Ни разу до этого не испытывал такого расслабления. Атмосфера, музыка, виски — всё на 10/10.»</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar-letter" style="background: #241C14;">ИМ</div>
+        <div><div class="testimonial-name">Игорь М.</div><div class="testimonial-meta">Клиент · 6 месяцев</div></div>
+      </div>
+    </div>
+    <div class="testimonial-card reveal reveal-delay-2">
+      <div class="testimonial-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      <p class="testimonial-text">«Привёл сына первый раз — боялись, что будет плакать. Дэн нашёл подход моментально, и ребёнок сидел спокойно. Результат шикарный!»</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar-letter" style="background: #302313;">АП</div>
+        <div><div class="testimonial-name">Андрей П.</div><div class="testimonial-meta">Клиент с сыном · 1 год</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="section booking" id="booking">
+  <div class="booking-inner">
+    <div class="booking-info">
+      <div class="section-label reveal">Онлайн запись</div>
+      <h2 class="reveal reveal-delay-1">Запишитесь<br/>за <span style="color:var(--gold)">30 секунд</span></h2>
+      <p class="reveal reveal-delay-2">Выберите мастера, услугу и удобное время. Подтверждение придёт на телефон сразу же.</p>
+      <ul class="booking-perks reveal reveal-delay-3">
+        <li class="booking-perk">Выбор конкретного мастера</li>
+        <li class="booking-perk">Моментальное SMS-подтверждение</li>
+        <li class="booking-perk">Бесплатная отмена за 2 часа</li>
+        <li class="booking-perk">Напоминание за 1 час до визита</li>
+        <li class="booking-perk">Онлайн-оплата или наличными на месте</li>
+      </ul>
+    </div>
+    <div class="booking-form reveal reveal-delay-2">
+      <div class="form-title">Забронировать кресло</div>
+      <form id="bookingForm" action="https://formspree.io/f/FORMSPREE_ID" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="Новая запись — МАНИФЕСТОР" />
+        <input type="hidden" name="_next" value="" />
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="nameInput">Имя</label>
+            <input type="text" id="nameInput" name="name" class="form-control" placeholder="Ваше имя" autocomplete="name" required />
+            <small class="form-error" id="nameError" hidden>Введите имя.</small>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="phoneInput">Телефон</label>
+            <input type="tel" id="phoneInput" name="phone" class="form-control" placeholder="+7 (___) ___-__-__" inputmode="tel" autocomplete="tel" required />
+            <small class="form-error" id="phoneError" hidden>Введите телефон в формате +7 (___) ___-__-__.</small>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="masterSelect">Мастер</label>
+          <select class="form-control" id="masterSelect" name="master">
+            <option value="">Любой доступный</option>
+            <option>Алекс Громов — Старший мастер</option>
+            <option>Марк Волков — Барбер и Стилист</option>
+            <option>Дэн Соколов — Мастер бритья</option>
+            <option>Рома Лисин — Барбер</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="serviceSelect">Услуга</label>
+          <select class="form-control" id="serviceSelect" name="service">
+            <option value="">Выберите услугу</option>
+            <option>Классическая стрижка — от 1 200 ₽</option>
+            <option>Бритьё и борода — от 800 ₽</option>
+            <option>Hot Towel Shave — от 1 500 ₽</option>
+            <option>VIP Комплекс — от 2 800 ₽</option>
+            <option>Камуфляж седины — от 1 800 ₽</option>
+            <option>Детская стрижка — от 700 ₽</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label" for="dateInput">Дата</label><input type="date" name="date" class="form-control" id="dateInput" required /></div>
+          <div class="form-group">
+            <label class="form-label" for="timeSelect">Время</label>
+            <select class="form-control" id="timeSelect" name="time">
+              <option>10:00</option><option>10:30</option><option>11:00</option><option>11:30</option>
+              <option>12:00</option><option>12:30</option><option>13:00</option><option>14:00</option>
+              <option>14:30</option><option>15:00</option><option>15:30</option><option>16:00</option>
+              <option>16:30</option><option>17:00</option><option>17:30</option><option>18:00</option>
+              <option>18:30</option><option>19:00</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn-primary form-submit" id="submitBtn">✦ Подтвердить запись</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- INFO STRIP -->
+<div class="info-strip">
+  <div class="info-item"><div class="info-icon">📍</div><div class="info-label">Адрес</div><div class="info-value">ул. Центральная, 3, Самара</div></div>
+  <div class="info-item"><div class="info-icon">🕐</div><div class="info-label">Часы работы</div><div class="info-value">Пн–Вс: 10:00 – 21:00</div></div>
+  <div class="info-item"><div class="info-icon">📞</div><div class="info-label">Телефон</div><div class="info-value">+7 (993) 473-74-28<br><a href="https://wa.me/79934737428" target="_blank" rel="noopener" style="color:var(--gold);font-size:0.8rem;">WhatsApp</a></div></div>
+  <div class="info-item"><div class="info-icon">✉️</div><div class="info-label">Email</div><div class="info-value">hello@manifestorbarber.ru</div></div>
+</div>
+<section class="map-section">
+  <iframe
+    src="https://yandex.ru/map-widget/v1/?ll=50.192127%2C53.220303&z=16&pt=50.192127,53.220303,pm2rdl"
+    width="100%" height="100%" frameborder="0"
+    allowfullscreen style="display:block;"
+    title="Расположение МАНИФЕСТОР — ул. Центральная, 3, Самара">
+  </iframe>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#home" class="nav-logo"><img src="images/LOGO.jpg" alt="МАНИФЕСТОР Barber" /></a>
+      <p>Мужская мастерская с классическим подходом. Мы создаём образы, которые работают на вас.</p>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/manifestor_barbershop_samara/" target="_blank" rel="noopener" class="footer-social" aria-label="Instagram Манифестор">ig</a>
+        <a href="https://vk.com/manifestor.barbershop" target="_blank" rel="noopener" class="footer-social" aria-label="ВКонтакте Манифестор">vk</a>
+        <a href="https://t.me/manifestorbarber" target="_blank" rel="noopener" class="footer-social" aria-label="Telegram барбершопа">tg</a>
+        <a href="#" class="footer-social" aria-label="YouTube барбершопа"><!-- TODO: вставить реальную ссылку YouTube -->yt</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Услуги</h4>
+      <ul>
+        <li><a href="#services">Классическая стрижка</a></li>
+        <li><a href="#services">Бритьё и Борода</a></li>
+        <li><a href="#services">Hot Towel Shave</a></li>
+        <li><a href="#services">VIP Комплекс</a></li>
+        <li><a href="#services">Детская стрижка</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Информация</h4>
+      <ul>
+        <li><a href="#about">О нас</a></li>
+        <li><a href="#team">Мастера</a></li>
+        <li><a href="#gallery">Галерея</a></li>
+        <li><a href="#testimonials">Отзывы</a></li>
+        <li><a href="#"><!-- TODO: вставить ссылку на подарочные карты -->Подарочные карты</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Контакты</h4>
+      <ul>
+        <li><a href="https://yandex.ru/maps/?text=%D0%A6%D0%B5%D0%BD%D1%82%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F%20%D1%83%D0%BB.%2C%203%2C%20%D0%A1%D0%B0%D0%BC%D0%B0%D1%80%D0%B0" target="_blank" rel="noopener">ул. Центральная, 3, Самара</a></li>
+        <li><a href="tel:+79934737428">+7 (993) 473-74-28</a></li>
+        <li><a href="mailto:hello@manifestorbarber.ru">hello@manifestorbarber.ru</a></li>
+        <li style="margin-top:16px"><a href="https://n1248198.yclients.com/company/785200/personal/select-services?o=" target="_blank" rel="noopener" style="color:var(--gold)">Записаться →</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2026 МАНИФЕСТОР Барбершоп. Все права защищены.</div>
+    <div class="footer-legal"><a href="#"><!-- TODO: вставить ссылку на политику конфиденциальности -->Политика конфиденциальности</a><a href="#"><!-- TODO: вставить ссылку на оферту -->Оферта</a></div>
+  </div>
+</footer>
+
+<!-- FLOATING MESSENGER -->
+<a href="https://t.me/manifestorbarber" target="_blank" rel="noopener" class="float-messenger" aria-label="Написать в Telegram">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.944 4.665c.307-1.346-.485-1.873-1.316-1.575L2.957 9.914c-1.206.47-1.188 1.143-.207 1.445l4.53 1.414 10.49-6.617c.496-.302.949-.14.576.19l-8.503 7.676-.322 4.91c.472 0 .68-.216.944-.472l2.268-2.204 4.716 3.48c.87.48 1.494.232 1.71-.807l2.785-13.264Z"/></svg>
+</a>
+
+<!-- MOBILE STICKY BAR -->
+<div class="sticky-bar" id="stickyBar">
+  <a href="tel:+79934737428" class="sticky-bar-call">📞</a>
+  <a href="https://n1248198.yclients.com/company/785200/personal/select-services?o=" target="_blank" rel="noopener" class="sticky-bar-cta">✦ Записаться</a>
+</div>
+
+<!-- SUCCESS MODAL -->
+<div id="successModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:1000;align-items:center;justify-content:center;backdrop-filter:blur(8px)">
+  <div style="background:#1A1A1A;border:1px solid rgba(45,189,126,0.3);padding:56px;max-width:480px;width:90%;text-align:center;animation:fadeInUp 0.4s ease">
+    <div style="font-size:3rem;margin-bottom:20px;color:#2DBD7E">✦</div>
+    <h3 style="font-family:'Playfair Display',serif;font-size:1.8rem;color:#2DBD7E;margin-bottom:16px">Запись подтверждена!</h3>
+    <p style="color:rgba(245,240,232,0.65);font-size:0.9rem;margin-bottom:32px">SMS-подтверждение придёт в течение нескольких минут. Ждём вас!</p>
+    <button onclick="closeModal()" class="btn-primary" style="cursor:pointer;border:none;width:100%">Отлично, спасибо!</button>
+  </div>
+</div>
+
+<script>
+const navbar = document.getElementById('navbar');
+const bookingForm = document.getElementById('bookingForm');
+const successModal = document.getElementById('successModal');
+const phoneInput = document.getElementById('phoneInput');
+const nameInput = document.getElementById('nameInput');
+const submitBtn = document.getElementById('submitBtn');
+const nameError = document.getElementById('nameError');
+const phoneError = document.getElementById('phoneError');
+
+window.addEventListener('scroll', () => { navbar.classList.toggle('scrolled', window.scrollY > 50); });
+
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+reveals.forEach(el => observer.observe(el));
+
+const today = new Date().toISOString().split('T')[0];
+document.getElementById('dateInput').min = today;
+document.getElementById('dateInput').value = today;
+
+function closeModal() {
+  successModal.style.display = 'none';
+}
+window.closeModal = closeModal;
+successModal.addEventListener('click', (e) => { if (e.target === e.currentTarget) closeModal(); });
+
+function formatPhone(value) {
+  const digits = value.replace(/\D/g, '').replace(/^8/, '7');
+  let normalized = digits;
+  if (!normalized.startsWith('7')) normalized = '7' + normalized;
+  normalized = normalized.slice(0, 11);
+  let result = '+7';
+  if (normalized.length > 1) result += ' (' + normalized.slice(1, 4);
+  if (normalized.length >= 4) result += ') ' + normalized.slice(4, 7);
+  if (normalized.length >= 7) result += '-' + normalized.slice(7, 9);
+  if (normalized.length >= 9) result += '-' + normalized.slice(9, 11);
+  return result;
+}
+
+function validatePhone() {
+  const valid = /^\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}$/.test(phoneInput.value.trim());
+  phoneInput.classList.toggle('error', !valid);
+  phoneError.hidden = valid;
+  return valid;
+}
+
+function validateName() {
+  const valid = nameInput.value.trim().length > 1;
+  nameInput.classList.toggle('error', !valid);
+  nameError.hidden = valid;
+  return valid;
+}
+
+phoneInput.addEventListener('input', (e) => {
+  e.target.value = formatPhone(e.target.value);
+  if (e.target.value.length > 0) validatePhone();
+});
+nameInput.addEventListener('input', validateName);
+
+bookingForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const isNameValid = validateName();
+  const isPhoneValid = validatePhone();
+  if (!isNameValid || !isPhoneValid) return;
+
+  const formData = new FormData(bookingForm);
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = '✦ Отправка...';
+
+  try {
+    const response = await fetch(bookingForm.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      successModal.style.display = 'flex';
+      bookingForm.reset();
+      phoneInput.classList.remove('error');
+      nameInput.classList.remove('error');
+      nameError.hidden = true;
+      phoneError.hidden = true;
+      document.getElementById('dateInput').value = today;
+    } else {
+      alert('Не удалось отправить форму. Проверьте Formspree ID и попробуйте снова.');
+    }
+  } catch (error) {
+    alert('Ошибка сети. Попробуйте ещё раз.');
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = '✦ Подтвердить запись';
+  }
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    const href = link.getAttribute('href');
+    if (href === '#') return;
+    const target = document.querySelector(href);
+    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+</script>
+</body>
+</html>
