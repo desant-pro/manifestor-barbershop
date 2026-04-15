@@ -142,7 +142,8 @@ nav.scrolled { background: rgba(10,10,10,0.95); backdrop-filter: blur(12px); bor
 .about-text p { color: rgba(245,240,232,0.65); margin-bottom: 20px; font-size: 0.95rem; }
 .about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px; }
 .about-feature { display: flex; gap: 14px; align-items: flex-start; }
-.about-feature-icon { width: 36px; height: 36px; border: 1px solid var(--gold-dark); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.1rem; }
+.about-feature-icon { width: 36px; height: 36px; border: 1px solid var(--gold-dark); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--gold); }
+.about-feature-icon svg { width: 18px; height: 18px; display: block; }
 .about-feature-text h4 { font-size: 0.85rem; font-family: 'Inter', sans-serif; font-weight: 600; color: var(--light); margin-bottom: 4px; }
 .about-feature-text p { font-size: 0.78rem; color: var(--gray); margin: 0; }
 
@@ -155,7 +156,7 @@ nav.scrolled { background: rgba(10,10,10,0.95); backdrop-filter: blur(12px); bor
 .service-card:hover::before { transform: scaleX(1); }
 .service-card:hover .service-num { opacity: 0.08; }
 .service-num { font-family: 'Bebas Neue', cursive; font-size: 4rem; color: var(--gold); opacity: 0.04; position: absolute; top: 12px; right: 24px; line-height: 1; transition: var(--transition); }
-.service-icon { font-size: 1.8rem; margin-bottom: 20px; display: block; }
+.service-icon { width: 36px; height: 36px; margin-bottom: 20px; display: block; color: var(--gold); }
 .service-card h3 { font-size: 1.3rem; margin-bottom: 12px; color: var(--light); }
 .service-card p { font-size: 0.83rem; color: var(--gray); line-height: 1.7; margin-bottom: 24px; }
 .service-price { display: flex; align-items: baseline; gap: 4px; }
@@ -186,7 +187,8 @@ nav.scrolled { background: rgba(10,10,10,0.95); backdrop-filter: blur(12px); bor
 .team-role { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-top: 4px; font-weight: 500; }
 .team-exp { font-size: 0.78rem; color: var(--gray); margin-top: 6px; }
 .team-socials { display: flex; gap: 12px; margin-top: 12px; }
-.team-social { width: 28px; height: 28px; border: 1px solid rgba(45,189,126,0.3); display: flex; align-items: center; justify-content: center; font-size: 0.75rem; color: var(--gray); text-decoration: none; transition: var(--transition); }
+.team-social { width: 28px; height: 28px; border: 1px solid rgba(45,189,126,0.3); display: flex; align-items: center; justify-content: center; color: var(--gray); text-decoration: none; transition: var(--transition); }
+.team-social svg { width: 13px; height: 13px; display: block; }
 .team-social:hover { border-color: var(--gold); color: var(--gold); }
 
 /* TESTIMONIALS */
@@ -254,7 +256,8 @@ nav.scrolled { background: rgba(10,10,10,0.95); backdrop-filter: blur(12px); bor
 /* INFO STRIP */
 .info-strip { background: var(--gold); padding: 60px 80px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; }
 .info-item { text-align: center; }
-.info-icon { font-size: 1.6rem; margin-bottom: 12px; }
+.info-icon { width: 40px; height: 40px; margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; color: var(--black); }
+.info-icon svg { width: 28px; height: 28px; display: block; }
 .info-label { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(10,10,10,0.6); font-weight: 500; margin-bottom: 6px; }
 .info-value { font-family: 'Playfair Display', serif; font-size: 1.0rem; color: var(--black); font-weight: 700; }
 
@@ -263,7 +266,8 @@ footer { background: var(--dark2); padding: 80px 80px 40px; border-top: 1px soli
 .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 64px; }
 .footer-brand p { font-size: 0.85rem; color: var(--gray); max-width: 280px; line-height: 1.7; margin-top: 16px; }
 .footer-socials { display: flex; gap: 10px; margin-top: 24px; }
-.footer-social { width: 36px; height: 36px; border: 1px solid rgba(45,189,126,0.2); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; color: var(--gray); text-decoration: none; transition: var(--transition); }
+.footer-social { width: 36px; height: 36px; border: 1px solid rgba(45,189,126,0.2); display: flex; align-items: center; justify-content: center; color: var(--gray); text-decoration: none; transition: var(--transition); }
+.footer-social svg { width: 16px; height: 16px; display: block; }
 .footer-social:hover { border-color: var(--gold); color: var(--gold); }
 .footer-col h4 { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); font-family: 'Inter', sans-serif; font-weight: 600; margin-bottom: 20px; }
 .footer-col ul { list-style: none; }
@@ -395,19 +399,19 @@ footer { background: var(--dark2); padding: 80px 80px 40px; border-top: 1px soli
     <p class="reveal reveal-delay-3">Наши мастера прошли обучение в лучших школах Европы и работают только с премиальными инструментами. Каждая стрижка — это разговор, а не просто услуга.</p>
     <div class="about-features">
       <div class="about-feature reveal reveal-delay-2">
-        <div class="about-feature-icon">✂</div>
+        <div class="about-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></div>
         <div class="about-feature-text"><h4>Только ручная работа</h4><p>Никаких шаблонов, каждая стрижка под вас</p></div>
       </div>
       <div class="about-feature reveal reveal-delay-3">
-        <div class="about-feature-icon">🪒</div>
+        <div class="about-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="6" rx="1"/><path d="M9 9V6h6v3M9 15v3h6v-3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
         <div class="about-feature-text"><h4>Прямое бритьё</h4><p>Традиционный шейв с горячими полотенцами</p></div>
       </div>
       <div class="about-feature reveal reveal-delay-4">
-        <div class="about-feature-icon">🎖</div>
+        <div class="about-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="6"/><path d="M8.56 14.44 6 22l6-3 6 3-2.56-7.56"/></svg></div>
         <div class="about-feature-text"><h4>Мастера-эксперты</h4><p>Сертифицированные барберы с опытом 5+ лет</p></div>
       </div>
       <div class="about-feature reveal reveal-delay-5">
-        <div class="about-feature-icon">🥃</div>
+        <div class="about-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 2h14l-2 9H7z"/><path d="M7 11v9h10v-9"/><line x1="5" y1="6" x2="19" y2="6"/></svg></div>
         <div class="about-feature-text"><h4>Добро пожаловать</h4><p>Виски или кофе — во время стрижки</p></div>
       </div>
     </div>
@@ -423,42 +427,42 @@ footer { background: var(--dark2); padding: 80px 80px 40px; border-top: 1px soli
   <div class="services-grid">
     <div class="service-card reveal">
       <div class="service-num">01</div>
-      <span class="service-icon">✂️</span>
+      <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></span>
       <h3>Классическая стрижка</h3>
       <p>Полная мужская стрижка с мытьём головы, укладкой и финальной обработкой бритвой по контуру шеи.</p>
       <div class="service-price"><span class="service-price-from">от</span><span class="service-price-num">1 200</span><span class="service-price-currency">₽</span></div>
     </div>
     <div class="service-card reveal reveal-delay-1">
       <div class="service-num">02</div>
-      <span class="service-icon">🪒</span>
+      <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="6" rx="1"/><path d="M9 9V6h6v3M9 15v3h6v-3"/><line x1="8" y1="12" x2="16" y2="12"/></svg></span>
       <h3>Бритьё и Борода</h3>
       <p>Коррекция и оформление бороды, горячее полотенце, масло после бритья. Полный ритуал уважения.</p>
       <div class="service-price"><span class="service-price-from">от</span><span class="service-price-num">800</span><span class="service-price-currency">₽</span></div>
     </div>
     <div class="service-card reveal reveal-delay-2">
       <div class="service-num">03</div>
-      <span class="service-icon">🔥</span>
+      <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 007-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 007 7z"/><path d="M12 22c-2 0-4-1.5-4-4 0-1.5 1-2.5 2-3.5 0 1.5 2 2.5 2 2.5s2-1 2-2.5c1 1 2 2 2 3.5 0 2.5-2 4-4 4z"/></svg></span>
       <h3>Hot Towel Shave</h3>
       <p>Традиционное бритьё опасной бритвой с горячим полотенцем, пеной из помазка и успокаивающей маской.</p>
       <div class="service-price"><span class="service-price-from">от</span><span class="service-price-num">1 500</span><span class="service-price-currency">₽</span></div>
     </div>
     <div class="service-card reveal">
       <div class="service-num">04</div>
-      <span class="service-icon">👑</span>
+      <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 19h20M4 19l2-10 4.5 5L12 4l1.5 10L18 9l2 10"/><rect x="2" y="19" width="20" height="2" rx="1"/></svg></span>
       <h3>VIP Комплекс</h3>
       <p>Стрижка + борода + горячее полотенце + уход за лицом + напиток. Полный джентльменский ритуал.</p>
       <div class="service-price"><span class="service-price-from">от</span><span class="service-price-num">2 800</span><span class="service-price-currency">₽</span></div>
     </div>
     <div class="service-card reveal reveal-delay-1">
       <div class="service-num">05</div>
-      <span class="service-icon">🎨</span>
+      <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/><path d="M15 5l4 4"/></svg></span>
       <h3>Камуфляж седины</h3>
       <p>Деликатное тонирование для естественного результата. Возвращает цвет без эффекта покрашено.</p>
       <div class="service-price"><span class="service-price-from">от</span><span class="service-price-num">1 800</span><span class="service-price-currency">₽</span></div>
     </div>
     <div class="service-card reveal reveal-delay-2">
       <div class="service-num">06</div>
-      <span class="service-icon">👦</span>
+      <span class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M5 20v-1a7 7 0 0114 0v1"/><path d="M9 8c0 0 .5-2 3-2s3 2 3 2"/></svg></span>
       <h3>Детская стрижка</h3>
       <p>Для джентльменов до 12 лет. Терпеливые мастера, быстро и качественно, с призом в конце!</p>
       <div class="service-price"><span class="service-price-from">от</span><span class="service-price-num">700</span><span class="service-price-currency">₽</span></div>
@@ -494,7 +498,7 @@ footer { background: var(--dark2); padding: 80px 80px 40px; border-top: 1px soli
         <div class="team-name">Алекс Громов</div>
         <div class="team-role">Старший мастер</div>
         <div class="team-exp">10 лет · Специалист по фейдам</div>
-        <div class="team-socials"><a href="#" class="team-social" aria-label="Instagram мастера"><!-- TODO: вставить реальную ссылку Instagram -->ig</a><a href="#" class="team-social" aria-label="Telegram мастера"><!-- TODO: вставить реальную ссылку Telegram -->tg</a></div>
+        <div class="team-socials"><a href="#" class="team-social" aria-label="Instagram мастера"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a><a href="#" class="team-social" aria-label="Telegram мастера"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg></a></div>
       </div>
     </div>
     <div class="team-card reveal reveal-delay-1">
@@ -503,7 +507,7 @@ footer { background: var(--dark2); padding: 80px 80px 40px; border-top: 1px soli
         <div class="team-name">Марк Волков</div>
         <div class="team-role">Барбер и Стилист</div>
         <div class="team-exp">7 лет · Классические стрижки</div>
-        <div class="team-socials"><a href="#" class="team-social" aria-label="Instagram мастера"><!-- TODO: вставить реальную ссылку Instagram -->ig</a><a href="#" class="team-social" aria-label="Telegram мастера"><!-- TODO: вставить реальную ссылку Telegram -->tg</a></div>
+        <div class="team-socials"><a href="#" class="team-social" aria-label="Instagram мастера"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a><a href="#" class="team-social" aria-label="Telegram мастера"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg></a></div>
       </div>
     </div>
     <div class="team-card reveal reveal-delay-2">
@@ -512,7 +516,7 @@ footer { background: var(--dark2); padding: 80px 80px 40px; border-top: 1px soli
         <div class="team-name">Дэн Соколов</div>
         <div class="team-role">Мастер бритья</div>
         <div class="team-exp">6 лет · Hot Towel Shave</div>
-        <div class="team-socials"><a href="#" class="team-social" aria-label="Instagram мастера"><!-- TODO: вставить реальную ссылку Instagram -->ig</a><a href="#" class="team-social" aria-label="Telegram мастера"><!-- TODO: вставить реальную ссылку Telegram -->tg</a></div>
+        <div class="team-socials"><a href="#" class="team-social" aria-label="Instagram мастера"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a><a href="#" class="team-social" aria-label="Telegram мастера"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg></a></div>
       </div>
     </div>
     <div class="team-card reveal reveal-delay-3">
@@ -521,7 +525,7 @@ footer { background: var(--dark2); padding: 80px 80px 40px; border-top: 1px soli
         <div class="team-name">Рома Лисин</div>
         <div class="team-role">Барбер</div>
         <div class="team-exp">3 года · Мужские тренды</div>
-        <div class="team-socials"><a href="#" class="team-social" aria-label="Instagram мастера"><!-- TODO: вставить реальную ссылку Instagram -->ig</a><a href="#" class="team-social" aria-label="Telegram мастера"><!-- TODO: вставить реальную ссылку Telegram -->tg</a></div>
+        <div class="team-socials"><a href="#" class="team-social" aria-label="Instagram мастера"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a><a href="#" class="team-social" aria-label="Telegram мастера"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg></a></div>
       </div>
     </div>
   </div>
@@ -636,10 +640,10 @@ footer { background: var(--dark2); padding: 80px 80px 40px; border-top: 1px soli
 
 <!-- INFO STRIP -->
 <div class="info-strip">
-  <div class="info-item"><div class="info-icon">📍</div><div class="info-label">Адрес</div><div class="info-value">ул. Центральная, 3, Самара</div></div>
-  <div class="info-item"><div class="info-icon">🕐</div><div class="info-label">Часы работы</div><div class="info-value">Пн–Вс: 10:00 – 21:00</div></div>
-  <div class="info-item"><div class="info-icon">📞</div><div class="info-label">Телефон</div><div class="info-value">+7 (993) 473-74-28<br><a href="https://wa.me/79934737428" target="_blank" rel="noopener" style="color:var(--gold);font-size:0.8rem;">WhatsApp</a></div></div>
-  <div class="info-item"><div class="info-icon">✉️</div><div class="info-label">Email</div><div class="info-value">hello@manifestorbarber.ru</div></div>
+  <div class="info-item"><div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div class="info-label">Адрес</div><div class="info-value">ул. Центральная, 3, Самара</div></div>
+  <div class="info-item"><div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div class="info-label">Часы работы</div><div class="info-value">Пн–Вс: 10:00 – 21:00</div></div>
+  <div class="info-item"><div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-5-5 19.79 19.79 0 01-3.07-8.67A2 2 0 015.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L9.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div><div class="info-label">Телефон</div><div class="info-value">+7 (993) 473-74-28<br><a href="https://wa.me/79934737428" target="_blank" rel="noopener" style="color:var(--gold);font-size:0.8rem;">WhatsApp</a></div></div>
+  <div class="info-item"><div class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div class="info-label">Email</div><div class="info-value">hello@manifestorbarber.ru</div></div>
 </div>
 <section class="map-section">
   <iframe
@@ -657,10 +661,10 @@ footer { background: var(--dark2); padding: 80px 80px 40px; border-top: 1px soli
       <a href="#home" class="nav-logo"><img src="images/LOGO.jpg" alt="МАНИФЕСТОР Barber" /></a>
       <p>Мужская мастерская с классическим подходом. Мы создаём образы, которые работают на вас.</p>
       <div class="footer-socials">
-        <a href="https://www.instagram.com/manifestor_barbershop_samara/" target="_blank" rel="noopener" class="footer-social" aria-label="Instagram Манифестор">ig</a>
-        <a href="https://vk.com/manifestor.barbershop" target="_blank" rel="noopener" class="footer-social" aria-label="ВКонтакте Манифестор">vk</a>
-        <a href="https://t.me/manifestorbarber" target="_blank" rel="noopener" class="footer-social" aria-label="Telegram барбершопа">tg</a>
-        <a href="#" class="footer-social" aria-label="YouTube барбершопа"><!-- TODO: вставить реальную ссылку YouTube -->yt</a>
+        <a href="https://www.instagram.com/manifestor_barbershop_samara/" target="_blank" rel="noopener" class="footer-social" aria-label="Instagram Манифестор"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+        <a href="https://vk.com/manifestor.barbershop" target="_blank" rel="noopener" class="footer-social" aria-label="ВКонтакте Манифестор"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.579 6.855c.14-.465 0-.806-.666-.806h-2.201c-.56 0-.818.295-.957.620 0 0-1.12 2.723-2.702 4.488-.512.512-.745.675-1.024.675-.14 0-.344-.163-.344-.628V6.855c0-.559-.162-.806-.629-.806H9.642c-.35 0-.559.26-.559.507 0 .531.793.654.873 2.149v3.246c0 .71-.128.839-.407.839-.745 0-2.557-2.734-3.630-5.863-.21-.607-.421-.852-.984-.852H2.733c-.629 0-.755.295-.755.620 0 .582.745 3.454 3.468 7.258 1.815 2.607 4.371 4.020 6.697 4.020 1.394 0 1.568-.314 1.568-.853v-1.968c0-.629.132-.754.573-.754.327 0 .886.163 2.19 1.42 1.490 1.490 1.736 2.155 2.574 2.155h2.201c.629 0 .944-.314.762-.934-.198-.617-.91-1.514-1.853-2.576-.512-.605-1.281-1.257-1.513-1.583-.327-.42-.234-.605 0-.978.001-.001 2.676-3.768 2.955-5.047z"/></svg></a>
+        <a href="https://t.me/manifestorbarber" target="_blank" rel="noopener" class="footer-social" aria-label="Telegram барбершопа"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg></a>
+        <a href="#" class="footer-social" aria-label="YouTube барбершопа"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136C4.495 20.455 12 20.455 12 20.455s7.505 0 9.376-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
       </div>
     </div>
     <div class="footer-col">
